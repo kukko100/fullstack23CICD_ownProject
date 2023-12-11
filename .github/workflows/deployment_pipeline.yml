@@ -61,6 +61,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
-          DEFAULT_BRANCH: master
+          DEFAULT_BRANCH: main
   
   #added secrets to github
