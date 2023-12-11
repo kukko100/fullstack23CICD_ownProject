@@ -3,7 +3,7 @@ name: Deployment Pipeline
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -63,3 +63,4 @@ jobs:
           DEFAULT_BUMP: patch
           DEFAULT_BRANCH: master
   
+  #added secrets to github
