@@ -63,3 +63,4 @@ jobs:
           DEFAULT_BUMP: patch
           DEFAULT_BRANCH: master
   
+  #added secrets to github
