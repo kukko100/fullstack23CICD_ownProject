@@ -11,6 +11,7 @@ const App = () => {
   
   useEffect(() => {
     dispatch(initializeAnecdotes())
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -25,5 +26,3 @@ const App = () => {
 }
 
 export default App
-
-//testing pull requests

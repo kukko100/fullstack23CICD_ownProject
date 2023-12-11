@@ -22,4 +22,10 @@ const updateVote = async (anecdote) => {
   return response.data
 }
 
-export default { getAll, createNew, updateVote }
+const anecdoteService = {
+  getAll,
+  createNew,
+  updateVote
+}
+
+export default anecdoteService
