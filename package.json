@@ -14,14 +14,16 @@
     "react-redux": "^8.1.2",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.89.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -p3001 --watch anecdotes.json"
+    "server": "json-server -p3001 --watch anecdotes.json",
+    "eslint": "eslint \"./**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +44,8 @@
     ]
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.11",
+    "eslint": "^8.55.0",
     "json-server": "^0.17.3"
   }
 }
