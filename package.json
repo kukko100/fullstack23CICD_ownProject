@@ -27,7 +27,7 @@
     "eslint": "eslint \"./**/*.{js,jsx}\"",
     "cypress:open": "cypress open",
     "test:e2e": "cypress run",
-    "start-prod": "node app.js"
+    "start-prod": "node App.js"
   },
   "eslintConfig": {
     "extends": [
