@@ -1,31 +1,46 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const baseUrl = 'http://localhost:3001/anecdotes'
+const baseUrl = 'http://localhost:3001/anecdotes';
 
 const getAll = async () => {
-  const response = await axios.get(baseUrl)
-  return response.data
-}
+  try {
+    const response = await axios.get(baseUrl);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching anecdotes:', error);
+    throw error;
+  }
+};
 
 const createNew = async (content) => {
-  const object = { content: content, id: 0, votes: 0 }
-  const response = await axios.post(baseUrl, object)
-  return response.data
-}
+  try {
+    const object = { content: content, id: 0, votes: 0 };
+    const response = await axios.post(baseUrl, object);
+    return response.data;
+  } catch (error) {
+    console.error('Error creating new anecdote:', error);
+    throw error;
+  }
+};
 
 const updateVote = async (anecdote) => {
-  const updatedAnecdote = {
-    ...anecdote,
-    votes: anecdote.votes + 1,
+  try {
+    const updatedAnecdote = {
+      ...anecdote,
+      votes: anecdote.votes + 1,
+    };
+    const response = await axios.put(`${baseUrl}/${anecdote.id}`, updatedAnecdote);
+    return response.data;
+  } catch (error) {
+    console.error('Error updating vote for anecdote:', error);
+    throw error;
   }
-  const response = await axios.put(`${baseUrl}/${anecdote.id}`, updatedAnecdote)
-  return response.data
-}
+};
 
 const anecdoteService = {
   getAll,
   createNew,
-  updateVote
-}
+  updateVote,
+};
 
-export default anecdoteService
+export default anecdoteService;
