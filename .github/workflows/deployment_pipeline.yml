@@ -63,4 +63,3 @@ jobs:
           DEFAULT_BUMP: patch
           DEFAULT_BRANCH: main
   
-  #added secrets to github, modified github settings for permissions
