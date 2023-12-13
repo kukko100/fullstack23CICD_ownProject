@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.0",
+    "cypress": "^13.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
@@ -20,10 +21,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "server": "json-server -p3001 --watch anecdotes.json",
-    "eslint": "eslint \"./**/*.{js,jsx}\""
+    "eslint": "eslint \"./**/*.{js,jsx}\"",
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run",
+    "start-prod": "node App.js"
   },
   "eslintConfig": {
     "extends": [
